@@ -1,129 +1,93 @@
-/* إعدادات عامة */
+/* Reset أساسي */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f8fb;
     color: #333;
-    line-height: 1.6;
-    direction: rtl; /* اتجاه النص من اليمين لليسار */
-}
-
-/* تنسيق العناوين */
-h1, h2, h3 {
-    color: #2c3e50;
+    padding: 20px;
+    direction: rtl;
 }
 
 h1 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-top: 20px;
-    color: green;
+    color: #003366;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-/* تنسيق الفاصل */
 hr {
-    border: 1px solid #ddd;
-    margin: 20px 0;
+    width: 80px;
+    height: 4px;
+    background-color: #0077b6;
+    border: none;
+    margin: 0 auto 40px auto;
+    border-radius: 5px;
 }
 
-/* تنسيق الروابط */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* تنسيق المحتوى */
-.content, .content2 {
+.content2 {
     display: flex;
     flex-wrap: wrap;
+    gap: 40px;
     justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    justify-content: space-evenly; /* توزيع العناصر بشكل متساوي */
 }
 
-/* تنسيق العناصر في المحتوى */
-.item2, .item1, .item3 {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.item1, .item3 {
+    background: #fff;
+    padding: 30px 20px;
     width: 300px;
-    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    margin: 15px;
+    transition: transform 0.3s ease;
 }
 
-.item2:hover, .item3:hover, .item1:hover {
-    transform: translateY(-10px);
+.item1:hover, .item3:hover {
+    transform: translateY(-5px);
 }
 
-/* تنسيق الصور */
-.item2 img, .item1 img, .item3 img {
+.item1 h2, .item3 h2 {
+    font-size: 24px;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.item1 h3, .item3 h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.item1 a img,
+.item3 a img {
     margin-top: 10px;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    transition: transform 0.2s ease;
 }
 
-/* تنسيق الأيقونات */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* تنسيق الأزرار */
-a img {
-    transition: transform 0.3s ease-in-out;
-}
-
-a img:hover {
+.item1 a img:hover,
+.item3 a img:hover {
     transform: scale(1.1);
 }
 
-/* تنسيق الفوتر */
-.footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #777;
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+.item1 h3 img,
+.item3 h3 img {
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-/* تصميم متجاوب */
+a img:last-child {
+    display: block;
+    margin: 30px auto 0 auto;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .content, .content2 {
+    .content2 {
         flex-direction: column;
         align-items: center;
-    }
-
-    .item2, .item1, .item3 {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .item2, .item1, .item3 {
-        width: 90%;
-    }
-
-    .footer {
-        font-size: 0.8rem;
     }
 }
